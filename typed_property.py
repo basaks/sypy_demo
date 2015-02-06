@@ -33,7 +33,8 @@ class typed_property(property):
             raise KeyError
 
 ###################################################################################################
-class name(metaclass = typed_property):
+class name(object):
+    __metaclass__ = typed_property
     key_type = str
     value_type = str
  

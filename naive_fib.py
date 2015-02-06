@@ -28,9 +28,10 @@ class unary_function(type):
         
         return ret
 
-class naive_fibonacci(metaclass = unary_function):
+class naive_fibonacci(object):
+    __metaclass__ = unary_function
     cache = True
-    values  = {0:1, 1:1}
+    values = {0: 1, 1: 1}
     def __call__(self, a):
         return naive_fibonacci(a - 1) + naive_fibonacci(a -2)
 

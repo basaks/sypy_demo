@@ -59,7 +59,8 @@ class sum_series(metaclass = seq_function):
         return add(args[0], sum_series(*args[1:]))
 
 ###################################################################################################
-class mul2(metaclass = binary_function):
+class mul2(object):
+    __metaclass__ = binary_function
     def __call__(self, a, b):
         return a * b 
 

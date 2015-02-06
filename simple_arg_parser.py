@@ -43,7 +43,8 @@ class function(type):
         return ret
 
 ###################################################################################################
-class add(metaclass = function):
+class add(object):
+    __metaclass__ = function
     arguments = (int, int)
     def __call__(self, a, b):
         return a + b

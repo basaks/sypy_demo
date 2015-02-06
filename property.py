@@ -26,10 +26,11 @@ class property(type):
             raise KeyError
 
 ###################################################################################################
-class name(metaclass = property):
+class name(object):
+    __metaclass__ = property
     pass
  
 if __name__ == '__main__':
-    name("harbour bridge", "old coat hanger")
+    print(name("harbour bridge", "old coat hanger"))
     print(name("harbour bridge"))
 

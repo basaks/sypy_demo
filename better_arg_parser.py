@@ -70,7 +70,8 @@ class function(type):
         return ret
 
 ###################################################################################################
-class sum_series(metaclass = function):
+class sum_series(object):
+    __metaclass__ = function
     vartypes = [tuple]
     cache  = True
     values = {(): 0}
